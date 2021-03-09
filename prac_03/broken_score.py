@@ -1,27 +1,24 @@
 """
-Broken program to determine score status
+Refactor the broken program determining score status in prac_01 to use functions
 """
 
-# the most efficient if-elif-else 'ladder'
-score = float(input("Enter score: "))
-if score < 0 or score > 100:
-    print("Invalid score")
-elif score >= 90:
-    print("Excellent")
-elif score >= 50:
-    print("Passable")
-else:
-    print("Bad")
-score = float(input("Enter score: "))
 
-# the other way to answer the question by using if-elif-else with 'while'
-score = float(input("Enter score: "))
-while 0 <= score <= 100:
-    if score >= 90:
-        print("Excellent")
-    elif score >= 50:
-        print("Passable")
-    else:
-        print("Bad")
+def main():
+    """Get a score and print its status."""
     score = float(input("Enter score: "))
-print("Invalid score")
+    print(determine_status(score))
+
+
+def determine_status(score):
+    """Determine the status of a given score."""
+    if score < 0 or score > 100:
+        return "Invalid score"
+    elif score >= 90:
+        return "Excellent"
+    elif score >= 50:
+        return "Passable"
+    else:
+        return "Bad"
+
+
+main()
