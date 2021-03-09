@@ -1,32 +1,33 @@
+"""
+Create a text file called temps_input.txt and fill it
+with at least 15 floats of any values between -200 and
++200.
+Read the values in temps_input.txt as Fahrenheit values
+and write the converted Celsius values to temps_output.txt
+"""
 
-MENU = """C - Convert Celsius to Fahrenheit
-F - Convert Fahrenheit to Celsius
-Q - Quit"""
+import random
 
 
 def main():
-    """Temperature conversion program using functions."""
-    print(MENU)
-    choice = input(">>> ").upper()
-    while choice != "Q":
-        if choice == "C":
-            celsius = float(input("Celsius: "))
-            fahrenheit = convert_celsius_to_fahrenheit(celsius)
-            print("Result: {:.2f} F".format(fahrenheit))
-        elif choice == "F":
-            fahrenheit = float(input("Fahrenheit: "))
-            celsius = convert_fahrenheit_to_celsius(fahrenheit)
-            print("Result: {:.2f} C".format(celsius))
-        else:
-            print("Invalid option")
-        print(MENU)
-        choice = input(">>> ").upper()
-    print("Thank you.")
+    """Convert input file of one temperature unit to output file of another unit."""
+    create_input_file(15)
+    input_file = open("temps_input.txt", "r")
+    output_file = open("temps_output.txt", "w")
+    for line in input_file:
+        result = convert_fahrenheit_to_celsius(float(line))
+        print(result, file=output_file)
+    input_file.close()
+    output_file.close()
 
 
-def convert_celsius_to_fahrenheit(celsius):
-    """Convert celsius to fahrenheit."""
-    return celsius * 9.0 / 5 + 32
+def create_input_file(quantity):
+    """Write number (quantity) of temperatures to file."""
+    temperatures_file = open("temps_input.txt", "w")
+    for i in range(quantity):
+        temperature = random.uniform(-200, 200)
+        print(temperature, file=temperatures_file)
+    temperatures_file.close()
 
 
 def convert_fahrenheit_to_celsius(fahrenheit):
