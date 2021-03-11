@@ -1,7 +1,24 @@
+"""
+More scores
+"""
+
+import random
+
+
 def main():
-    """Get a score and print its status."""
-    score = float(input("Enter score: "))
-    print(determine_status(score))
+    """Get a number of scores and write results to output file."""
+    number_of_scores = int(input("Enter a number of scores: "))
+    output_file = open("results.txt", "w")
+    for score in range(number_of_scores):
+        score = generate_random_scores(score)
+        result = determine_status(score)
+        print("{} is {}".format(score, result), file=output_file)
+    output_file.close()
+
+
+def generate_random_scores(score):
+    """Generate random scores."""
+    return int(random.randint(0, 100))
 
 
 def determine_status(score):
