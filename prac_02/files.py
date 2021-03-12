@@ -10,7 +10,7 @@ out_file.close()
 # 2. Write code that opens "name.txt" and reads the name (as above) then prints,
 # "Your name is Bob" (or whatever the name is in the file).
 in_file = open("name.txt", "r")
-name = in_file.read().strip()  # can we use str(in_file.read()) instead?
+name = in_file.read().strip()
 in_file.close()
 print("Your name is", name)
 
