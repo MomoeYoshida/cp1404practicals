@@ -21,10 +21,3 @@ print(random.uniform(2.5, 5.5))  # line 3
 
 # 4. Write code, not a comment, to produce a random number between 1 and 100 inclusive.
 print(random.randint(1, 100))
-
-# the alternative way using 'from random import *'
-from random import *
-
-print(randint(5, 20))
-print(randrange(3, 10, 2))
-print(uniform(2.5, 5.5))
