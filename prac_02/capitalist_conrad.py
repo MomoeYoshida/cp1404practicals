@@ -56,7 +56,7 @@ while MIN_PRICE <= price <= MAX_PRICE:
 
 # 3. Update your program (1.) so that it prints (writes) the output to a file.
 import random
-
+# using the same CONSTANTS as program 1
 MAX_INCREASE = 0.1  # 10%
 MAX_DECREASE = 0.05  # 5%
 MIN_PRICE = 0.01
