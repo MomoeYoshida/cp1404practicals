@@ -17,4 +17,6 @@ print(numbers + [6, 5, 3])  # [3, 1, 4, 1, 5, 9, 2, 6, 5, 3]
 
 # Get all the elements from numbers except the first two
 print(numbers[2:])
+# Check if 9 is an element of numbers
+print(9 in numbers)
 
