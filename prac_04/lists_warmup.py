@@ -4,7 +4,7 @@ Without running the code, write down your answers to
 these questions in your Python file as a comment, then
 use Python to see if you were correct.
 """
-numbers = [3, 1, 4, 1, 5, 9, 2]
+numbers = ["ten", 1, 4, 1, 5, 9, 2]
 
 print(numbers[-1])  # 2
 print(numbers[3])  # 1
