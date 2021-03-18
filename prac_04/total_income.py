@@ -1,5 +1,5 @@
 """
-Starter code for cumulative total income program
+Cumulative total income program
 """
 
 
