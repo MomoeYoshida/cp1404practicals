@@ -28,8 +28,7 @@ def main():
             quick_pick.append(number)
         # Each line of numbers should be displayed in sorted order
         quick_pick.sort()
-        output = ' '.join('{:2}'.format(number) for number in quick_pick)
-        print(output)
+        print(' '.join('{:2}'.format(number) for number in quick_pick))
 
 
 main()
