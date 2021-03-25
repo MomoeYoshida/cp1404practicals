@@ -1,7 +1,6 @@
 """
-CP1404/CP5632 Practical
-State names in a dictionary
-File needs reformatting
+This is a program that uses a 'constant' (name is ALL_CAPS) dictionary to store
+the Australian state abbreviations and names.
 """
 
 CODE_TO_NAME = {"QLD": "Queensland", "NSW": "New South Wales", "NT": "Northern Territory", "WA": "Western Australia",
