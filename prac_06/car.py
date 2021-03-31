@@ -3,14 +3,21 @@
 
 class Car:
     """Represent a Car object."""
-
-    def __init__(self, fuel=0):
+    # 7. Add a name field to the Car class, and adjust the __init__ and __str__ methods
+    # to set and display this respectively.
+    def __init__(self, name="", fuel=0):
         """Initialise a Car instance.
 
         fuel: float, one unit of fuel drives one kilometre
         """
+        self.name = name
         self.fuel = fuel
         self.odometer = 0
+
+    # 6. Add the __str__ method to the Car class.
+    def __str__(self):
+        """Return a string representation of a Car object."""
+        return "{}, fuel={}, odometer={}".format(self.name, self.fuel, self.odometer)
 
     def add_fuel(self, amount):
         """Add amount to the car's fuel."""
