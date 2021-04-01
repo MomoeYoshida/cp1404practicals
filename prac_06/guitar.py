@@ -1,10 +1,11 @@
 """CP1404 Practical - a Guitar class."""
 
+YEAR = 2021
+VINTAGE_AGE = 50
+
 
 class Guitar:
     """Represent fields/attributes of a Guitar."""
-    YEAR = 2021
-
     def __init__(self, name="", year=0, cost=0):
         """Initialise a Guitar instance."""
         self.name = name
@@ -15,10 +16,11 @@ class Guitar:
         """Return a string representation of Guitar fields."""
         return "{} ({}) : ${:,.2f}".format(self.name, self.year, self.cost)
 
-    def get_age(self, age):
-        """Return the guitar age in years."""
-        age = Guitar.YEAR - self.year
+    def get_age(self):
+        """Get the guitar age in years based on the YEAR."""
+        return YEAR - self.year
 
     def is_vintage(self):
-        """Determine if the guitar is 50 or more years old."""
-        return self.get_age() >= 50
+        """Determine if the guitar is vintage or not based on age."""
+        return self.get_age() >= VINTAGE_AGE
+
