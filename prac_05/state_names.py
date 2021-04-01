@@ -17,4 +17,4 @@ while state_code != "":
 
 # 4. Write a loop that prints all of the states and names neatly lined up with string formatting
 for state_code, CODE_TO_NAME[state_code] in CODE_TO_NAME.items():
-    print("{:<3s} is {:<}".format(state_code, CODE_TO_NAME[state_code]))
+    print("{:3} is {}".format(state_code, CODE_TO_NAME[state_code]))
