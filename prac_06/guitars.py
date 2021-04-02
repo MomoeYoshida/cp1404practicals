@@ -1,6 +1,6 @@
-"""CP1404 Practical - This program should use a list to store all of the
-user's guitars (keep inputting until they enter a blank name), then print
-their details."""
+"""CP1404 Practical - Client program to use the Guitar class.
+This program should use a list to store all of the user's guitars (keep
+inputting until they enter a blank name), then print their details."""
 
 from prac_06.guitar import Guitar
 
