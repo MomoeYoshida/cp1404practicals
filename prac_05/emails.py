@@ -26,9 +26,9 @@ def main():
 
 def get_name_from_email(email):
     """Get expected name from email."""
-    name = email.split('@')[0]
-    name = name.split('.')
-    name = " ".join(name).title()
+    prefix = email.split('@')[0]
+    name_parts = prefix.split('.')
+    name = " ".join(name_parts).title()
     return name
 
 
