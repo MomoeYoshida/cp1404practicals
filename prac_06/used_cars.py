@@ -1,11 +1,10 @@
 """CP1404 Practical - Client code to use the Car class."""
-# Note that the import has a folder (module) in it.
 
 from prac_06.car import Car
 
 
 def main():
-    """Demo test code to show how to use car class."""
+    """Demo test code to show how to use the Car class."""
     # 7. Add names (literals) to the constructors where you create Car objects.
     my_car = Car("My car", 180)
     my_car.drive(30)
