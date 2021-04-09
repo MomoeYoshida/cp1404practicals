@@ -1,4 +1,6 @@
-"""CP1404 Practical - Client code to use the Car class."""
+"""CP1404 Practical - Client code to use the Car class.
+8. In this program, just print your car object/s to make sure that the
+__str__ methods is working as expected."""
 
 from prac_06.car import Car
 
