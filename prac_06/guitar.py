@@ -1,6 +1,8 @@
 """CP1404 Practical - a Guitar class."""
+# Get the current year from the system clock by using "datetime" module.
+from datetime import date
 
-CURRENT_YEAR = 2021
+CURRENT_YEAR = date.today().year
 VINTAGE_AGE = 50
 
 
@@ -17,7 +19,7 @@ class Guitar:
         return "{} ({}) : ${:,.2f}".format(self.name, self.year, self.cost)
 
     def get_age(self):
-        """Get the guitar age in years based on the YEAR."""
+        """Get the guitar age based on the CURRENT_YEAR."""
         return CURRENT_YEAR - self.year
 
     def is_vintage(self):
