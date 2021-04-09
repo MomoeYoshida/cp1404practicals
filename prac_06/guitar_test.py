@@ -1,9 +1,6 @@
 """CP1404 Practical - Tests for the Guitar class."""
 
 from prac_06.guitar import Guitar
-from datetime import date
-
-CURRENT_YEAR = date.today().year
 
 
 def run_tests():
@@ -17,7 +14,7 @@ def run_tests():
     print("{} get_age() - Expected {}. Got {}".format(another.name, 8, another.get_age()))
     # Test that the is_vintage() method works
     print("{} is_vintage() - Expected {}. Got {}".format(guitar.name, True, guitar.is_vintage()))
-    print("{} is_vintage() - Expected {}. Got {}".format(another.name, False, guitar.is_vintage()))
+    print("{} is_vintage() - Expected {}. Got {}".format(another.name, False, another.is_vintage()))
 
 
 if __name__ == '__main__':
