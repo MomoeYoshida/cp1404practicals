@@ -1,8 +1,9 @@
 """CP1404 Practical - Tests for the Guitar class."""
 
 from prac_06.guitar import Guitar
+from datetime import date
 
-CURRENT_YEAR = 2021
+CURRENT_YEAR = date.today().year
 
 
 def run_tests():
