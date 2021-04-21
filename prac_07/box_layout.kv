@@ -2,8 +2,14 @@ BoxLayout:
     orientation: 'vertical'
 #    orientation: 'horizontal'
     Button:
-        text: 'one'
+        text: 'Clear'  # 3. Change the first button so it says "Clear"
+    TextInput:  # 8. Change button "two" to a text input field
+        id: input_name
+        text: ''
     Button:
-        text: 'two'
-    Button:
-        text: 'three'
+        text: 'Greet'  # 3. Change the third button so it says "Greet"
+        on_press: app.handle_greet()  # 4. Add a button handler (a callback for the press event)
+    Label:  # 1. Add a label
+        id: output_label  # 6. Change the text of the label
+        text: 'Enter your name'
+        color: (1, 1, 0, 1)  # 2. Set the new label's text colour to yellow
