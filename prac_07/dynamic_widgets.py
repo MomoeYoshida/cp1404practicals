@@ -34,10 +34,11 @@ class DynamicWidgetsApp(App):
         for name in self.name_to_phone:
             # create a button for each data entry, specifying the text and id
             # (although text and id are the same in this case, you should see how this works)
-            temp_button = Button(text=name, id=name)
-            temp_button.bind(on_release=self.press_entry)
+            temp_button = Button(text=name, id=name)  # Create the widgets (e.g. buttons) in Python code
+            temp_button.bind(on_release=self.press_entry)  # Bind a function callback when you make the widget object
+            # to add event handler code
             # add the button to the "entries_box" layout widget
-            self.root.ids.entries_box.add_widget(temp_button)
+            self.root.ids.entries_box.add_widget(temp_button)  # Add these new widgets using the add_widget method
 
     def press_entry(self, instance):
         """
