@@ -5,16 +5,16 @@ Kivy GUI program to convert miles to kilometres
 
 from kivy.app import App
 from kivy.lang import Builder
-from kivy.app import StringProperty  # Use a StringProperty for the text on the output (km) label
+from kivy.app import StringProperty
 
 __author__ = 'Momoe Yoshida'
 
-FACTOR = 1.60934
+FACTOR_MILES_TO_KM = 1.60934
 
 
 class MilesConverterApp(App):
     """MilesConverterApp is a Kivy App for the conversion of miles into kilometres."""
-    output_km = StringProperty()
+    output_km = StringProperty()  # Use a StringProperty for the text on the output (km) label.
 
     def build(self):
         """Build the Kivy App from the Kv file."""
@@ -23,15 +23,15 @@ class MilesConverterApp(App):
         return self.root
 
     def handle_calculate(self):
-        """Handle the conversion."""
+        """Handle the conversion from miles to kilometres."""
         value = self.get_valid_miles()
-        result = value * FACTOR
-        self.root.ids.output_label.text = str(result)  # convert to str
+        result = value * FACTOR_MILES_TO_KM
+        self.root.ids.output_label.text = str(result)
 
     def handle_increment(self, change):
         """Handle pressing "Up"/"Down" buttons."""
         value = self.get_valid_miles() + change
-        self.root.ids.input_miles.text = str(value)  # convert to str
+        self.root.ids.input_miles.text = str(value)
         self.handle_calculate()  # make the result appear immediately when the up/down buttons are pressed
 
     def get_valid_miles(self):
