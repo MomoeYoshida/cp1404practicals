@@ -1,8 +1,5 @@
 """
-Kivy example for CP1404/CP5632, IT@JCU
 Dynamically create buttons based on content of dictionary
-Lindsay Ward
-Modified from popup_demo, 11/07/2016
 """
 
 from kivy.app import App
@@ -12,15 +9,14 @@ from kivy.properties import StringProperty
 
 
 class DynamicWidgetsApp(App):
-    """Main program - Kivy app to demo dynamic widget creation."""
+    """Kivy app to demo dynamic widget creation."""
     status_text = StringProperty()
 
     def __init__(self, **kwargs):
         """Construct main app."""
         super().__init__(**kwargs)
         # basic data example - dictionary of names: phone numbers
-        # TODO: After running it, add another entry to the dictionary and see how the layout changes
-        self.name_to_phone = {"Bob Brown": "0414144411", "Cat Cyan": "0441411211", "Oren Ochre": "0432123456"}
+        self.name_to_phone = {"Bob Brown": "0414144411", "Cat Cyan": "0441411211", "Oren Ochre": "0432123456", "Momoe": "012345"}
 
     def build(self):
         """Build the Kivy GUI."""
