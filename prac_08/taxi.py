@@ -1,6 +1,6 @@
 """
-CP1404/CP5632 Practical
-Car class
+CP1404 Practical
+Taxi class extends the Car class
 """
 from prac_08.car import Car
 
@@ -10,8 +10,8 @@ class Taxi(Car):
 
     def __init__(self, name, fuel, price_per_km):
         """Initialise a Taxi instance, based on parent class Car."""
-        super().__init__(name, fuel)
-        self.price_per_km = price_per_km
+        super().__init__(name, fuel)  # Override methods to take account of the characteristics of a Taxi
+        self.price_per_km = price_per_km  # Add new attributes
         self.current_fare_distance = 0
 
     def __str__(self):
@@ -20,7 +20,7 @@ class Taxi(Car):
                                                              self.current_fare_distance,
                                                              self.price_per_km)
 
-    def get_fare(self):
+    def get_fare(self):  # Add new methods
         """Return the price for the taxi trip."""
         return self.price_per_km * self.current_fare_distance
 
@@ -28,7 +28,7 @@ class Taxi(Car):
         """Begin a new fare."""
         self.current_fare_distance = 0
 
-    def drive(self, distance):
+    def drive(self, distance):  # polymorphism
         """Drive like parent Car but calculate fare distance as well."""
         distance_driven = super().drive(distance)
         self.current_fare_distance += distance_driven
