@@ -12,7 +12,7 @@ class UnreliableCar(Car):
     def __init__(self, name, fuel, reliability):
         """Initialise a UnreliableCar instance, based on parent class Car."""
         super().__init__(name, fuel)  # Call the Car's version of __init__
-        self.reliability = reliability
+        self.reliability = reliability  # additional attribute
 
     def __str__(self):
         """Return a string like a Car but with car's reliability."""
