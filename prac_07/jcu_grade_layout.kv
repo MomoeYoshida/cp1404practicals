@@ -1,0 +1,21 @@
+BoxLayout:
+    orientation: 'vertical'
+    BoxLayout:
+        orientation: 'horizontal'
+        Button:
+            text: 'Clear'
+            on_press: app.handle_clear()
+            size_hint_x: 0.25
+        TextInput:
+            id: input_score
+            text: ''
+    BoxLayout:
+        orientation: 'horizontal'
+        Button:
+            text: 'Enter'
+            on_press: app.handle_enter()
+            size_hint_x: 0.25
+        Label:
+            id: output_label
+            text: 'Type in your score out of 100, then click Enter'
+            color: (1, 1, 0, 1)
