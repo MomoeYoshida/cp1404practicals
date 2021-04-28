@@ -31,11 +31,12 @@ def main():
         # reflection is stored as a string (Yes/No) and we want a Boolean. reflection is stored in the file as a
         # string, but this client code converts it to a Boolean ready for the class.
         reflection = parts[2] == "Yes"
+        pointer_arithmetic = parts[3] == "Yes"
 
         # construct a ProgrammingLanguage object using the elements
         # year should be an int
-        language = ProgrammingLanguage(parts[0], parts[1], reflection,
-                                       int(parts[3]))
+        language = ProgrammingLanguage(parts[0], parts[1], reflection, pointer_arithmetic,
+                                       int(parts[4]))
 
         # add the language we've just constructed to the list
         languages.append(language)
