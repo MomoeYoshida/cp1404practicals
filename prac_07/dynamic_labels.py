@@ -9,8 +9,8 @@ from kivy.uix.label import Label
 
 
 class DynamicLabelsApp(App):
-    """DynamicLabelsApp is a very simple App that has a list of names (strings) and displays each one
-as a separate Label."""
+    """DynamicLabelsApp is a very simple App that has a list of names
+    (strings) and displays each one as a separate Label."""
     def __init__(self, **kwargs):
         """Construct main app."""
         super().__init__(**kwargs)
@@ -20,14 +20,16 @@ as a separate Label."""
         """Build the Kivy GUI."""
         self.title = "Dynamic Labels"
         self.root = Builder.load_file('dynamic_labels.kv')
-        self.display_names()
+        self.make_labels()
         return self.root
 
-    def display_names(self):
-        """Display each name as a separate Label."""
+    def make_labels(self):
+        """Create separate Labels of names."""
         for name in self.names:
-            temp_label = Label(text=name)  # Create the widgets (labels) in Python code
-            self.root.ids.entries_box.add_widget(temp_label)  # Add these new widgets using the add_widget method
+            temp_label = Label(text=name)  # Create the widgets (labels) in
+            # Python code
+            self.root.ids.main.add_widget(temp_label)  # Add these new widgets
+            # using the add_widget method
 
 
 DynamicLabelsApp().run()
