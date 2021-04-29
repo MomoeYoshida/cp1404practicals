@@ -32,14 +32,16 @@ class MilesConverterApp(App):
         """Handle pressing "Up"/"Down" buttons."""
         value = self.get_valid_miles() + change
         self.root.ids.input_miles.text = str(value)
-        self.handle_calculate()  # make the result appear immediately when the up/down buttons are pressed
+        self.handle_calculate()  # make the result appear immediately when
+        # the up/down buttons are pressed
 
     def get_valid_miles(self):
         """Handle invalid inputs."""
         try:
             value = float(self.root.ids.input_miles.text)   # convert to float
             return value
-        except ValueError:  # If the text entered is not a valid number, just set the output result to 0.0.
+        except ValueError:  # If the text entered is not a valid number, just set
+            # the output result to 0.0.
             return 0
 
 
