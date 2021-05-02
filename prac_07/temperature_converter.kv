@@ -1,0 +1,25 @@
+BoxLayout:
+    orientation: 'vertical'
+    BoxLayout:
+        orientation: 'horizontal'
+        TextInput:
+            id: input_temperatures
+            text: ''
+            font_size: 48
+        BoxLayout:
+            orientation: 'vertical'
+            size_hint_x: 0.25
+            Button:
+                text: 'C'
+                on_press: app.convert_celsius_to_fahrenheit()
+            Button:
+                text: 'F'
+                on_press: app.convert_fahrenheit_to_celsius()
+            Button:
+                text: 'Q'
+                on_press: app.handle_quit()
+    Label:
+        id: output_label
+        font_size: 48
+        text: 'Enter Temperature\nC - Convert Celsius to Fahrenheit\nF - Convert Fahrenheit to Celsius\nQ - Quit'
+        color: (1, 1, 0, 1)
