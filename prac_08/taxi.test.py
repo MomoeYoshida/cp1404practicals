@@ -7,7 +7,7 @@ from prac_08.taxi import Taxi
 def main():
     """Demo test code to test the Taxi class."""
     # 1. Create a new taxi with name "Prius 1", 100 units of fuel and price of $1.23/km
-    prius_1 = Taxi("Prius 1", 100, 1.23)
+    prius_1 = Taxi("Prius 1", 100)
     # 2. Drive the taxi 40km
     prius_1.drive(40)
     # 3. Print the taxi's details and the current fare
