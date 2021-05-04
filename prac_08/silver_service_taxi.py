@@ -22,4 +22,3 @@ class SilverServiceTaxi(Taxi):
     def get_fare(self):  # 3. Add/override a method to calculate the fare
         """Calculate the fare."""
         return super().get_fare() + self.flagfall
-
