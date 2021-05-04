@@ -17,13 +17,9 @@ def main():
     print("Files in {}:\n{}\n".format(os.getcwd(), os.listdir('.')))
 
     # Make a new directory
-    # The next time you run this, it will crash if the directory exists due to
-    # trying to create an existing directory.
-    # 1. Use exception handling to avoid this crash (just pass)
-    try:
-        os.mkdir('temp')
-    except FileExistsError:
-        pass
+    # The next time you run this, it will crash if the directory exists
+    # TODO: Use exception handling to avoid the crash (just pass)
+    os.mkdir('temp')
 
     # Loop through each file in the (current) directory
     for filename in os.listdir('.'):
@@ -34,10 +30,11 @@ def main():
         new_name = get_fixed_filename(filename)
         print("Renaming {} to {}".format(filename, new_name))
 
-        # 2-a. Option 1: rename files (in same directory) to new name - in place
+        # TODO: Try these options one at a time
+        # Option 1: rename file to new name - in place
         # os.rename(filename, new_name)
 
-        # 2-b. Option 2: move files to a subdirectory with the new name
+        # Option 2: move file to new place, with new name
         # shutil.move(filename, 'temp/' + new_name)
 
 
@@ -55,13 +52,9 @@ def demo_walk():
         print("\tcontains subdirectories:", subdirectories)
         print("\tand files:", filenames)
         print("(Current working directory is: {})".format(os.getcwd()))
-        # 4 & 5. Add a loop that renames all of the files in filenames.
-        for filename in filenames:
-            former_name = os.path.join(directory_name, filename)
-            new_name = os.path.join(directory_name, get_fixed_filename(filename))
-            os.rename(former_name, new_name)
+
+        # TODO: add a loop to rename the files
 
 
-# 3. Comment out the call the main() and uncomment demo_walk().
-# main()
-demo_walk()
+main()
+# demo_walk()
