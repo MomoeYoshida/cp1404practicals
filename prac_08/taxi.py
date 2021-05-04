@@ -9,6 +9,7 @@ class Taxi(Car):
     """Specialised version of a Car that includes fare costs."""
     # 1. Add the class variable price_per_km and set it to 1.23
     price_per_km = 1.23
+    price_per_km = round(price_per_km, 1)
 
     # 2. Change the function so it does not take in the price_per_km.
     def __init__(self, name, fuel):
@@ -19,9 +20,9 @@ class Taxi(Car):
 
     def __str__(self):
         """Return a string like a Car but with current fare distance."""
-        return "{}, {}km on current fare, ${:.2f}/km".format(super().__str__(),
-                                                             self.current_fare_distance,
-                                                             self.price_per_km)
+        return "{}, {:.1f}km on current fare, ${:.2f}/km".format(super().__str__(),
+                                                                 self.current_fare_distance,
+                                                                 self.price_per_km)
 
     def get_fare(self):  # Add new methods
         """Return the price for the taxi trip."""
